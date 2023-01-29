@@ -1,12 +1,7 @@
 # bank_system_simple
 How to create a bank system to check your balance, deposit and do withdrawls.
 
-menu = """
-
-[d] Deposit
-[w] Withdraw
-[s] Statement
-[q] Quit
+menu = """[d] Deposit [w] Withdraw [s] Statement [q] Quit
 
 => """
 
