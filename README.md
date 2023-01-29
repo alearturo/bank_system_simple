@@ -1,7 +1,6 @@
 # bank_system_simple
 How to create a bank system to check your balance, deposit and do withdrawls.
 
-
 menu = """
 
 [d] Deposit
@@ -25,7 +24,7 @@ while True:
        value = float(input("Inform the valur of deposit: "))
        if value >0:
             balance += value 
-            statement += f"Deposit: $ {value:2f}\n"
+            statement += f"Deposit: $ {value:.2f}\n"
        else:
             print ("Operation failed!The value informed is invalid.")
     
@@ -35,7 +34,7 @@ while True:
             
             limit_exceeded = value > limit
             
-            withdraw_exceeded = limit_withdraw >= limit_withdraw
+            withdraw_exceeded = withdraw >= limit_withdraw
             
             if balance_exceeded:
                 print("Operation failed! You don't have balance enough.")
@@ -44,10 +43,10 @@ while True:
             elif withdraw_exceeded:
                 print ("Operation failed! Maximum limit of withdraw exceeded.")
         
-            elif valor > 0:
-                saldo -= valor
-                extrato += f"Saque: $ {value:.2f}\n"
-                number_withdraw += 1
+            elif value > 0:
+                balance -= value
+                statement += f"Saque: $ {value:.2f}\n"
+                withdraw += 1
             else:
                 print("Operation failed! The value informed is invalid.")
     
